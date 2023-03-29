@@ -8,16 +8,17 @@ function manupulate(array){
    .then((array)=>{
      const filterarray = array.filter((num)=>{num%2===0});
      setTimeout(()=>{
-      document.getElementById('output').innerText=filterarray.join(, );
+      document.getElementById('output').innerHTML=filterarray.join(, );
      },1000);
    })
    .then((filterarray)=>{
       const mult = array.map((num)=>{if(num%2===0){num*2}});
       setTimeout(()=>{
-         document.getElementById('output').innerText=filterarray.join(, );
+         document.getElementById('output').innerHTML=mult.join(, );
       },2000);
    })
    
    
 }
-manupulate([1,2,3,4]);
+let arr = [1,2,3,4]
+manupulate(arr);
